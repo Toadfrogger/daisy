@@ -1,5 +1,13 @@
 import Link from 'next/link';
 
+
+const menuItems = [
+    {name: "Home", link:"/"},
+    {name:"Articles", link:"/articles"},
+    {name: "Comments", link:"/comments"},
+    {name:"Help", link:"/help"}
+];
+
 export function Header() {
     return (
         <div className="navbar bg-base-100 shadow-sm flex justify-between">
@@ -7,9 +15,8 @@ export function Header() {
                 <a className="btn btn-ghost text-xl">daisyUI</a>
             </div>
             <ul className="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box">
-                <li><Link to="./common/main">Item 1</Link></li>
-                <li><a>Item 2</a></li>
-                <li><a>Item 3</a></li>
+
+                {menuItems.map((item) => (<li><a href={item.link}>{item.name}</a></li>))}
             </ul>
             <div >
                 <button className="btn btn-square btn-ghost">
