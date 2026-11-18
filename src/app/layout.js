@@ -9,7 +9,8 @@ export default function RootLayout({ children }) {
 
             <body className="min-h-full flex flex-col">
               <Header/>
-              {children}
+              <main className="my-16 min-h-screen mx-auto max-w-4xl"> {children}</main>
+              
               <Footer/>
               </body>
               

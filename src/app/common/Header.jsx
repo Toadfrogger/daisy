@@ -12,11 +12,11 @@ export function Header() {
     return (
         <div className="navbar bg-base-100 shadow-sm flex justify-between">
             <div >
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <a href="/" className="btn btn-ghost text-xl">daisyUI</a>
             </div>
             <ul className="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box">
 
-                {menuItems.map((item) => (<li><a href={item.link}>{item.name}</a></li>))}
+                {menuItems.map((item) => (<li key={item.name}><Link href={item.link}>{item.name}</Link></li>))}
             </ul>
             <div >
                 <button className="btn btn-square btn-ghost">
